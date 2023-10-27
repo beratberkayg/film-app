@@ -1,13 +1,33 @@
 "use client";
 import { useTheme } from "next-themes";
-import React, { useState } from "react";
-import { CiDark } from "react-icons/ci";
+import React, { useEffect, useState } from "react";
+import { CiDark, CiLight } from "react-icons/ci";
 const ThemeComp = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const themeMode = theme === "system " ? systemTheme : theme;
+
   return (
     <div>
-      <CiDark size={25} cursor={"pointer"} />
+      {mounted &&
+        (themeMode === "dark" ? (
+          <CiLight
+            onClick={() => setTheme("ligth")}
+            size={25}
+            className="cursor-pointer"
+          />
+        ) : (
+          <CiDark
+            onClick={() => setTheme("dark")}
+            size={25}
+            className="cursor-pointer"
+          />
+        ))}
     </div>
   );
 };
