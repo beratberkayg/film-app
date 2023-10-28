@@ -1,7 +1,8 @@
 import React from "react";
 
-const Page = () => {
-  return <div className="text-2xl">hellooooo</div>;
+const Page = ({ searchParams }) => {
+  console.log(searchParams);
+  return <div></div>;
 };
 
 export default Page;

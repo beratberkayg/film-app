@@ -2,6 +2,7 @@ import React from "react";
 import { BiSearch } from "react-icons/bi";
 import MenuItem from "./MenuItem";
 import ThemeComp from "./ThemeComp";
+import Link from "next/link";
 
 const Header = () => {
   const menu = [
@@ -17,9 +18,9 @@ const Header = () => {
 
   return (
     <div className="flex items-center justify-center flex-wrap gap-7 h-20 p-5">
-      <div className="bg-blue-600 rounded-lg p-3 text-2xl font-bold">
-        MovieApp
-      </div>
+      <Link href="/" className="bg-blue-600 rounded-lg p-3 text-2xl font-bold">
+        BBG Films
+      </Link>
       <div className="flex flex-1 items-center p-3 gap-2 border rounded-md">
         <input
           placeholder="Ne Arıyorsun?"
@@ -29,7 +30,7 @@ const Header = () => {
         <BiSearch size={25} cursor={"pointer"} />
       </div>
       <ThemeComp />
-      <div className="flex cursor-pointer">
+      <div className="flex ">
         {menu.map((mn, i) => (
           <MenuItem key={i} mn={mn} />
         ))}
