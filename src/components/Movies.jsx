@@ -4,14 +4,16 @@ import Image from "next/image";
 
 const Movies = ({ dt }) => {
   return (
-    <div className="w-[450px] h-[300px]">
+    <div>
       <Image
-        width={450}
+        width={400}
         height={300}
+        className="rounded-lg cursor-pointer"
         src={`https://image.tmdb.org/t/p/original/${
           dt?.backdrop_path || dt?.poster_path
         }`}
       />
+      <div className="absolute">{dt.title}</div>
     </div>
   );
 };
