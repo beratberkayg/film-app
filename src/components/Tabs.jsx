@@ -12,8 +12,8 @@ const Tabs = () => {
       url: "popular",
     },
     {
-      name: "En Son Gelenler",
-      url: "latest",
+      name: "Favoriler",
+      url: "top_rated",
     },
     {
       name: "Yakında Gelecekler",
