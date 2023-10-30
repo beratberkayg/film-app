@@ -21,7 +21,7 @@ const Tabs = () => {
     },
   ];
   return (
-    <div className="p-5 m-5 bg-gray-100 dark:bg-slate-900 flex items-center justify-center gap-7 rounded-lg">
+    <div className="p-3 m-5 bg-gray-100 dark:bg-slate-900 flex items-center justify-center gap-5 rounded-lg max-sm:mt-[130px]">
       {tabs.map((tab, i) => (
         <Link
           className={`cursor-pointer hover:opacity-75 transition-all ${

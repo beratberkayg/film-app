@@ -19,7 +19,7 @@ const Movies = ({ dt }) => {
           dt?.backdrop_path || dt?.poster_path
         }`}
       />
-      <div className="absolute bottom-0 p-3 text-blue-500 w-full h-full flex flex-col justify-end opacity-0 hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-0 p-3 text-blue-500 w-full h-full flex flex-col justify-end opacity-50 hover:opacity-100 transition-opacity">
         <p className="text-xl font-bold">{dt.title}</p>
         <div>
           {dt.release_date} - {dt.vote_average}

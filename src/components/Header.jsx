@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-center flex-wrap gap-7 h-20 p-5">
+    <div className="flex items-center justify-center flex-wrap gap-7 h-20 p-5 mb-[50px] ">
       <Link href="/" className="bg-blue-600 rounded-lg p-3 text-2xl font-bold">
         BBG Films
       </Link>
@@ -44,7 +44,7 @@ const Header = () => {
         <BiSearch onClick={searchFunc} size={25} cursor={"pointer"} />
       </div>
       <ThemeComp />
-      <div className="flex ">
+      <div className="flex">
         {menu.map((mn, i) => (
           <MenuItem key={i} mn={mn} />
         ))}

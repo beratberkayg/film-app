@@ -3,15 +3,18 @@ import "./global.css";
 import Header from "@/components/Header";
 import Providers from "./Providers";
 import Tabs from "@/components/Tabs";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const Layout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="flex flex-col">
+      <body className="">
         <Providers>
           <Header />
           <Tabs />
-          {children}
+          <main>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
