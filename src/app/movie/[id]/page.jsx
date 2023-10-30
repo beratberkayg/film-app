@@ -15,7 +15,7 @@ const Movie = async ({ params }) => {
   const movieDetail = await getMovie(id);
 
   return (
-    <div className="relative p-7 min-h-screen">
+    <div className="relative p-7 min-h-screen text-lime-300">
       <Image
         style={{ objectFit: "cover" }}
         fill
